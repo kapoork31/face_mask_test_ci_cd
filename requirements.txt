@@ -1,0 +1,6 @@
+tensorflow
+Keras
+Flask
+numpy == 1.18.0
+pytest==6.0.1
+pytest-cov==2.10.1
