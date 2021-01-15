@@ -34,7 +34,7 @@ def draw_image_with_boxes():
         face = preprocess_input(face)
         face = np.expand_dims(face, axis=0)
         (mask, withoutMask) = m.predict(face)[0]
-        label = "Mask" if mask > withoutMask else "No Mask"
+        label = "Yes Mask" if mask > withoutMask else "No Mask"
         color = (0, 255, 0) if label == "Mask" else (0, 0, 255)
         # include the probability in the label
         label = "{}: {:.2f}%".format(label, max(mask, withoutMask) * 100)
